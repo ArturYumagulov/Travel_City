@@ -4,5 +4,5 @@ from django.shortcuts import render
 
 def home_view(request):
     name = "Bob"
-    context = {'name': 'Dave'}
+    context = {'company_name': 'Tranzit Oil'}
     return render(request, 'home.html', context)
