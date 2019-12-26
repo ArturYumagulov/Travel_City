@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$2_2)^2!yg=!(g_k-*rrrt_%%b7e27(-vyl3ml+6kt9mwc=x40'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True   # отображение ошибок  (True в окне браузера)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []    # адреса которым разрешен доступ к данному проекту
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+]   # Список подключенных модулей
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -47,9 +47,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+]   # Список промежуточных "слоев" сквозь которые проходят запросы и ответы
 
-ROOT_URLCONF = 'travel.urls'
+ROOT_URLCONF = 'travel.urls'   # размещение файла urls отвечающего за проект
 
 TEMPLATES = [
     {
@@ -66,9 +66,10 @@ TEMPLATES = [
             ],
         },
     },
-]
+]   # настройки секций по работе с шаблонами
+#  DIRS список в котором находится папка с шаблонами
 
-WSGI_APPLICATION = 'travel.wsgi.application'
+WSGI_APPLICATION = 'travel.wsgi.application'  # адрес местоположения нашего веб-сервера
 
 
 # Database
@@ -79,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-}
+}   # БД
 
 
 # Password validation
