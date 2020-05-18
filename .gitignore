@@ -16,6 +16,7 @@
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
+.idea
 
 # Gradle
 .idea/**/gradle.xml
@@ -214,3 +215,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/python,pycharm,windows
+.vs

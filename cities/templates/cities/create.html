@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title%}Create city{% endblock %}
+{% block content%}
+<h1 class="display-6" align="center">Добавить новый город</h1>
+<div class="row mx-auto" align="center">
+    <div class="col-md-4">
+    <form action="" method="post">
+    <!--    <label for="fname">Город:</label><br>-->
+    <!--    <input type="text" id="fname" name="name"><br>-->
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="Сохранить">
+    </form>
+        </div>
+    </div>
+
+{% endblock %}

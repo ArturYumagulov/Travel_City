@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Удалить город{% endblock %}
+
+{% block content %}
+<h1 class="display-6" align="center">Редактирование города</h1>
+    <div class="row mx-auto" align="center">
+        <div class="col-md-4">
+            <form method="post">{% csrf_token %}
+            <p>Вы точно хотите удалить город "{{ object.name }}"?</p>
+            <input type="submit" value="Удалить">
+            </form></div></div>
+{% endblock %}
