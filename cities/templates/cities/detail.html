@@ -1,16 +1,31 @@
 {% extends "base.html" %}
 {% block title %}Город{% endblock %}
 {% block content %}
-    <h1 class="display-4">ГОРОД</h1>
+    <h1 class="display-4" align="center">ГОРОД</h1>
     <div class="row">
-        <div class="col-md-6">
-            <p>Название города: {{ object.name }}</p>
+        <div class="col-md-3 mx-auto">
+            <table class="table table-hover">
+                 <tbody>
+                <tr>
+                <td>
+                    <a>
+                        Название города:
+                    </a>
+                </td>
+                    <td>
+                        <h3>{{ object.name }}</h3>
+                    </td>
+                    </tr>
+                 </tbody>
+            </table>
         </div>
-     <div class="row">
-        <div class="container col-md-6">
-            <a href='{% url "city:home" %}'>
-                <button type="button" class="btn btn-outline-danger">Назад к списку</button>
-            </a>
-        </div>
+    </div>
+<div align="center">
+    <a href='{% url "city:home" %}'>
+        <button type="button" class="btn btn-secondary">Назад к списку</button>
+    </a>
 </div>
+
+
+
 {% endblock %}

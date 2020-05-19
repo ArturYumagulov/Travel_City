@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block title %}Города{% endblock %}
 {% block content %}
-    <h1 class="display-6" align="center">ГОРОДА</h1>
+    <h1 class="display-6 my-4" align="center">ГОРОДА</h1>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 mx-auto">
             <table class="table table-striped">
                 <tbody>
                 {% for object in object_list%}
@@ -26,6 +26,23 @@
                 </tr>
                 </tbody>
             </table>
+            <div class="pagination my-4 mx-auto" align="center">
+                <span class="step-links">
+                {% if object_list.has_previous %}
+                    <a href="?page=1">&laquo; В начало</a>
+                    <a href="?page={{ object_list.previous_page_number }}">Назад</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+                </span>
+
+                {% if object_list.has_next %}
+                    <a href="?page={{ object_list.next_page_number }}">Следующий</a>
+                    <a href="?page={{ object_list.paginator.num_pages }}">В конец &raquo;</a>
+                {% endif %}
+                </span>
+            </div>
 
             <a href="{% url 'city:add' %}">
                 <button type="button" class="btn btn-primary btn-lg btn-block">Добавить город</button>

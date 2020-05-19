@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+{% block title %}Поезда{% endblock %}
+
+{% block content%}
+<h1 class="display-6 my-4" align="center">Поезда</h1>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <table class="table table-striped">
+                <tbody>
+                {% for object in object_list%}
+                <tr>
+                    <td><a href="#">
+                        {{ object.name }}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <button type="button" class="btn btn-success btn-sm">Редактировать</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <button type="button" class="btn btn-danger btn-sm">Удалить</button>
+                        </a>
+                    </td>
+                {% endfor%}
+                </tr>
+                </tbody>
+            </table>
+
+
+{% endblock %}
