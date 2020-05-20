@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title%}Create train{% endblock %}
+{% block content%}
+<h1 class="display-6" align="center">Добавить новый поезд</h1>
+<div class="row" align="center">
+    <div class="col-md-4 mx-auto">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="Добавить">
+    </form>
+        </div>
+    </div>
+
+{% endblock %}
